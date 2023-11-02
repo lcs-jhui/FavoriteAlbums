@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		B91FE8E52AF4293F005FCF70 /* FavoriteAlbumsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FE8E42AF4293F005FCF70 /* FavoriteAlbumsApp.swift */; };
-		B91FE8E72AF4293F005FCF70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FE8E62AF4293F005FCF70 /* ContentView.swift */; };
 		B91FE8E92AF42941005FCF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FE8E82AF42941005FCF70 /* Assets.xcassets */; };
 		B91FE8EC2AF42941005FCF70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FE8EB2AF42941005FCF70 /* Preview Assets.xcassets */; };
+		B91FE8F42AF4295E005FCF70 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FE8F32AF4295E005FCF70 /* AlbumsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B91FE8E12AF4293F005FCF70 /* FavoriteAlbums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteAlbums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91FE8E42AF4293F005FCF70 /* FavoriteAlbumsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAlbumsApp.swift; sourceTree = "<group>"; };
-		B91FE8E62AF4293F005FCF70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B91FE8E82AF42941005FCF70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B91FE8EB2AF42941005FCF70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B91FE8F32AF4295E005FCF70 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				B91FE8E42AF4293F005FCF70 /* FavoriteAlbumsApp.swift */,
-				B91FE8E62AF4293F005FCF70 /* ContentView.swift */,
+				B91FE8F22AF4294B005FCF70 /* Views */,
 				B91FE8E82AF42941005FCF70 /* Assets.xcassets */,
 				B91FE8EA2AF42941005FCF70 /* Preview Content */,
 			);
@@ -65,6 +65,14 @@
 				B91FE8EB2AF42941005FCF70 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B91FE8F22AF4294B005FCF70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B91FE8F32AF4295E005FCF70 /* AlbumsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B91FE8E72AF4293F005FCF70 /* ContentView.swift in Sources */,
+				B91FE8F42AF4295E005FCF70 /* AlbumsView.swift in Sources */,
 				B91FE8E52AF4293F005FCF70 /* FavoriteAlbumsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
