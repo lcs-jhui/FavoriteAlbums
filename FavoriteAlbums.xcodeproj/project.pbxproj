@@ -11,6 +11,7 @@
 		B91FE8E92AF42941005FCF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FE8E82AF42941005FCF70 /* Assets.xcassets */; };
 		B91FE8EC2AF42941005FCF70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FE8EB2AF42941005FCF70 /* Preview Assets.xcassets */; };
 		B91FE8F42AF4295E005FCF70 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FE8F32AF4295E005FCF70 /* AlbumsView.swift */; };
+		B9E8D54B2AF431EF005F44E1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E8D54A2AF431EF005F44E1 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B91FE8E82AF42941005FCF70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B91FE8EB2AF42941005FCF70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B91FE8F32AF4295E005FCF70 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
+		B9E8D54A2AF431EF005F44E1 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				B91FE8E42AF4293F005FCF70 /* FavoriteAlbumsApp.swift */,
+				B91FE8F52AF43192005FCF70 /* Model */,
 				B91FE8F22AF4294B005FCF70 /* Views */,
 				B91FE8E82AF42941005FCF70 /* Assets.xcassets */,
 				B91FE8EA2AF42941005FCF70 /* Preview Content */,
@@ -73,6 +76,14 @@
 				B91FE8F32AF4295E005FCF70 /* AlbumsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B91FE8F52AF43192005FCF70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9E8D54A2AF431EF005F44E1 /* Album.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 			files = (
 				B91FE8F42AF4295E005FCF70 /* AlbumsView.swift in Sources */,
 				B91FE8E52AF4293F005FCF70 /* FavoriteAlbumsApp.swift in Sources */,
+				B9E8D54B2AF431EF005F44E1 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

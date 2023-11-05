@@ -15,6 +15,7 @@ struct AlbumsView: View {
     @State var albumImageLink = ""
     @State var rating = 3
     @State var filteringSelection = 3
+    @State var saved: [Album] = []
     
     //MARK: Computed Properties
     var body: some View {
@@ -42,6 +43,8 @@ struct AlbumsView: View {
                     .pickerStyle(.segmented)
                     
                     Button(action: {
+                        
+                        saveToList()
                         
                     }, label: {
                         Text("Add")
@@ -102,6 +105,27 @@ struct AlbumsView: View {
                 
             }
     }
+    
+    //MARK: Functions
+    
+    func saveToList() {
+        
+        saved.insert(
+            Album(
+                albumProvided: albumName,
+                artistProvided: artistName,
+                linkProvided: albumImageLink
+            ),
+            at: 0
+        )
+        
+        print(saved)
+        
+        albumName = ""
+        artistName = ""
+        albumImageLink = ""
+    }
+    
 }
 
 #Preview {
