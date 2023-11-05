@@ -65,11 +65,11 @@ struct AlbumsView: View {
                     }
                     .padding(.horizontal)
                     
-                    List {
+                    List(saved) { currentAlbum in
                         
                         HStack{
                             
-                            AsyncImage(url: URL(string: "https://m.media-amazon.com/images/I/71dSVXIhLoL._UF1000,1000_QL80_.jpg")) { phase in
+                            AsyncImage(url: URL(string: currentAlbum.linkProvided)) { phase in
                                 if let image = phase.image {
                                     image
                                         .resizable()
@@ -85,10 +85,10 @@ struct AlbumsView: View {
                             
                             VStack(alignment: .leading){
                                 
-                                Text("Voulez-Vous")
+                                Text(currentAlbum.albumProvided)
                                     .bold()
                                     .font(.title3)
-                                Text("ABBA")
+                                Text(currentAlbum.artistProvided)
                                     .font(.subheadline)
                                 
                             }
