@@ -14,7 +14,7 @@ struct AlbumsView: View {
     @State var artistName = ""
     @State var albumImageLink = ""
     @State var rating = 0
-    @State var filteringSelection = 3
+    @State var filteringSelection = 0
     @State var saved: [Album] = []
     
     //MARK: Computed Properties
@@ -57,6 +57,7 @@ struct AlbumsView: View {
                 VStack {
                     
                     Picker("Filtering On", selection: $filteringSelection) {
+                        Text("All Results").tag(0)
                         Text("1 Star").tag(1)
                         Text("2 Stars").tag(2)
                         Text("3 Stars").tag(3)
@@ -65,7 +66,7 @@ struct AlbumsView: View {
                     }
                     .padding(.horizontal)
                     
-                    List(saved) { currentAlbum in
+                    List(filtering(originalList: saved, on: filteringSelection)) { currentAlbum in
                         
                         HStack{
                             
@@ -126,6 +127,32 @@ struct AlbumsView: View {
         albumImageLink = ""
         rating = 0
     }
+    
+    func filtering(originalList: [Album], on desiredOutcome: Int) -> [Album] {
+        
+        //When the desired outcome is undetermined, just stop and return the original list
+        if desiredOutcome == 0 {
+            return originalList
+        }
+        
+        //Create an empty list to opoulate before returning
+        var filteredResults: [Album] = []
+        
+        //Iterate over the entire original list
+        for result in originalList {
+            
+            
+            //Copy any results that match the desired outcome to the new list
+            if result.ratingProvided == filteringSelection {
+                filteredResults.append(result)
+            }
+        }
+        
+        //Return only the filtered list
+        return filteredResults
+        
+    }
+
     
 }
 
