@@ -13,7 +13,7 @@ struct AlbumsView: View {
     @State var albumName = ""
     @State var artistName = ""
     @State var albumImageLink = ""
-    @State var rating = 3
+    @State var rating = 0
     @State var filteringSelection = 3
     @State var saved: [Album] = []
     
@@ -75,7 +75,7 @@ struct AlbumsView: View {
                                         .resizable()
                                         .scaledToFit()
                                 } else if phase.error != nil {
-                                    Text("Error Image")
+                                    Text("Invalid Link")
                                     
                                 } else {
                                     ProgressView()
@@ -95,7 +95,7 @@ struct AlbumsView: View {
                             
                             Spacer()
                             
-                            Text("\(rating)/5")
+                            Text("\(currentAlbum.ratingProvided)/5")
                                 .font(.title)
                             
                         }
@@ -114,7 +114,7 @@ struct AlbumsView: View {
             Album(
                 albumProvided: albumName,
                 artistProvided: artistName,
-                linkProvided: albumImageLink
+                linkProvided: albumImageLink, ratingProvided: rating
             ),
             at: 0
         )
@@ -124,6 +124,7 @@ struct AlbumsView: View {
         albumName = ""
         artistName = ""
         albumImageLink = ""
+        rating = 0
     }
     
 }
