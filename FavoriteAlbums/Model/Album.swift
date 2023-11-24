@@ -14,3 +14,4 @@ struct Album: Identifiable {
     let linkProvided: String
     let ratingProvided: Int
 }
+
